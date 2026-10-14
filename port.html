@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Gabriel — Full Stack Developer &amp; Systems</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#fbf9f4",
+            "surface": "#f5f2eb",
+            "surface-low": "#ede9e0",
+            "surface-card": "#ffffff",
+            "primary": "#12201b",
+            "forest-deep": "#1a2e26",
+            "forest-mid": "#243e34",
+            "emerald-accent": "#2e5a44",
+            "emerald-glow": "#3b7559",
+            "slate-indigo": "#1e293b",
+            "slate-muted": "#334155",
+            "warm-stone": "#e8e4da",
+            "warm-border": "#dcd6c8",
+            "on-surface": "#16201c",
+            "on-surface-muted": "#515e57",
+            "accent-sand": "#eef0eb"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+            serif: ["Newsreader", "serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @layer base {
+      body {
+        background-color: #fbf9f4;
+        color: #16201c;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-[#fbf9f4] text-[#16201c] antialiased selection:bg-[#2e5a44]/20 selection:text-[#12201b] min-h-screen flex flex-col justify-between">
+  <!-- Header Elegante e Arejado com proporções refinadas -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#fbf9f4]/90 border-b border-[#dcd6c8]/80 transition-all">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <a class="group flex items-center gap-3.5" href="#">
+        <div
+          class="w-10 h-10 rounded-full bg-[#1a2e26] text-[#fbf9f4] flex items-center justify-center font-serif italic text-lg font-bold group-hover:bg-[#2e5a44] transition-colors shadow-sm">
+          G
+        </div>
+        <div class="flex flex-col">
+          <span class="text-base font-bold tracking-tight text-[#16201c]">Gabriel</span>
+          <span class="text-xs text-[#515e57] font-mono font-medium">Full Stack &amp; Systems</span>
+        </div>
+      </a>
+      <!-- Status de Disponibilidade -->
+      <div
+        class="hidden sm:inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#ede9e0] border border-[#dcd6c8] text-xs font-semibold text-[#16201c]">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2e5a44] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2e5a44]"></span>
+        </span>
+        <span class="">Disponível para novos projetos</span>
+      </div>
+      <!-- Navegação e CTA -->
+      <nav class="flex items-center gap-6 text-sm font-semibold">
+        <a class="text-[#515e57] hover:text-[#16201c] transition-colors hidden md:block" href="#projetos">Projetos</a>
+        <a class="text-[#515e57] hover:text-[#16201c] transition-colors hidden md:block" href="#sobre">Sobre &amp;
+          Stack</a>
+        <a class="px-5 py-2.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-xs tracking-wider uppercase font-semibold hover:bg-[#243e34] transition-all shadow-sm flex items-center gap-2"
+          href="mailto:gabriel.dev@domain.com">
+          <span class="">Contato</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_outward</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main class="w-full flex-1 max-w-6xl mx-auto px-6 lg:px-10 pt-12 pb-24">
+    <!-- Hero Section: Tipografia Monumental e Imagem de Grande Impacto -->
+    <section class="py-12 md:py-20 border-b border-[#dcd6c8]/80">
+      <div class="flex flex-col-reverse lg:flex-row items-center lg:items-center justify-between gap-12 lg:gap-16">
+        <!-- Texto Principal em Grande Escala -->
+        <div class="flex-1 space-y-7 text-left">
+          <div
+            class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#e8eee9] text-[#243e34] border border-[#cbd8cf] text-xs font-mono uppercase tracking-wider font-bold">
+            <span class="">PORTFOLIO SELECIONADO</span>
+            <span class="text-[#2e5a44]/40">•</span>
+            <span class="">2025</span>
+          </div>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#12201b] leading-[1.1] tracking-tight font-bold">
+            Engenharia web refinada, arquitetura limpa e interfaces acolhedoras.
+          </h1>
+          <p class="text-lg sm:text-xl text-[#515e57] leading-relaxed max-w-2xl font-normal">
+            Olá, sou o <strong class="font-bold text-[#12201b]">Gabriel</strong>. Engenheiro Full Stack especializado em
+            sistemas resilientes, alta escalabilidade no backend e interfaces ricas com sensibilidade estética.
+          </p>
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm sm:text-base font-semibold hover:bg-[#243e34] transition-all shadow-sm hover:shadow-md"
+              href="#projetos">
+              <span class="">Explorar Projetos</span>
+              <span class="material-symbols-outlined text-lg">arrow_downward</span>
+            </a>
+            <a class="inline-flex items-center gap-2.5 px-5 py-3.5 rounded-full bg-[#ede9e0] border border-[#dcd6c8] text-[#16201c] text-sm sm:text-base font-semibold hover:bg-[#e4dfd4] transition-colors"
+              href="https://github.com" rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-lg">code</span>
+              <span class="font-mono text-xs sm:text-sm">github.com/gabriel</span>
+            </a>
+          </div>
+        </div>
+        <!-- Foto de Perfil de Grande Escala e Destaque Nobre -->
+        <div class="relative shrink-0">
+          <div
+            class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-3xl p-3 bg-gradient-to-b from-[#e8e4da] to-[#dcd6c8] shadow-lg border border-[#dcd6c8]">
+            <div
+              class="w-full h-full rounded-2xl overflow-hidden bg-[#f5f2eb] relative flex items-center justify-center border border-[#dcd6c8]">
+              <img alt="Foto de Gabriel"
+                class="w-full h-full object-cover grayscale-[15%] contrast-[102%] hover:scale-105 transition-transform duration-700 ease-out"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKGUatxuNzLo4CWwKP67Ptssfj2HqZxJo6U9qe3Rs8VpSikcgba-5TnqC8ftYxvjWbh8sGD80DCwHjAv62vbfTby5OKU__NBdEgOMvrBV22RLvZ0xk2TH9gY4LREzdrEeDoUdAhif9sR9C9bC4LFXDzmuDZD0KZaQaIfbBQ7XY2QJpwHBm95Ol7mWkh4ZRbJPV2crAfwti4okRG3wRy4JT-dgLSkfdwXTOcsGic1lLXrzWrBUPC6iG9g" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#12201b]/35 via-transparent to-transparent pointer-events-none">
+              </div>
+            </div>
+            <!-- Selo Open to work ampliado -->
+            <div
+              class="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#fbf9f4] border border-[#dcd6c8] shadow-md px-4 py-1.5 rounded-full flex items-center gap-2.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#2e5a44]"></span>
+              <span class="text-xs font-mono text-[#16201c] uppercase tracking-wider font-bold">Open to work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CARROSSEL DE PROJETOS DE ALTO IMPACTO (UM POR VEZ, 88% DA TELA COM PEEK SUTIL DO PRÓXIMO) -->
+    <section class="pt-16 pb-20 overflow-hidden" id="projetos">
+      <!-- Cabeçalho do Carrossel com Indicadores Grandes e Controles -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10">
+        <div>
+          <div
+            class="text-xs font-mono uppercase tracking-widest text-[#2e5a44] mb-2 font-bold flex items-center gap-2">
+            <span class="">Estudos de Caso Selecionados</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#12201b] font-bold">
+            Meus Projetos
+          </h2>
+        </div>
+        <!-- Controles de Navegação de Alta Usabilidade -->
+        <div class="flex items-center gap-4">
+          <!-- Indicador Numérico Prominente (ex: 01 / 04) -->
+          <div
+            class="font-mono text-sm sm:text-base font-semibold text-[#515e57] bg-[#ede9e0] border border-[#dcd6c8] px-4 py-2 rounded-full">
+            <span class="text-[#12201b] font-bold" id="carousel-current-index">01</span>
+            <span class="text-[#515e57]/60"> / </span>
+            <span class="text-[#515e57]" id="carousel-total-count">04</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <button aria-label="Projeto anterior"
+              class="w-12 h-12 rounded-full border border-[#dcd6c8] bg-[#f5f2eb] hover:bg-[#dcd6c8] hover:text-[#243e34] text-[#16201c] flex items-center justify-center transition-all shadow-xs active:scale-95"
+              id="slider-prev">
+              <span class="material-symbols-outlined text-2xl">west</span>
+            </button>
+            <button aria-label="Próximo projeto"
+              class="w-12 h-12 rounded-full border border-[#dcd6c8] bg-[#f5f2eb] hover:bg-[#dcd6c8] hover:text-[#243e34] text-[#16201c] flex items-center justify-center transition-all shadow-xs active:scale-95"
+              id="slider-next">
+              <span class="material-symbols-outlined text-2xl">east</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Container do Carrossel com Peek de 12% do Próximo Card -->
+      <div class="relative -mx-6 lg:-mx-10 px-6 lg:px-10">
+        <div class="flex gap-8 overflow-x-auto hide-scrollbar scroll-smooth snap-x snap-mandatory py-4"
+          id="projects-carousel">
+          <!-- PROJETO 01: HyperScale DB (Verde Floresta / Pinho Profundo & Esmeralda) -->
+          <article
+            class="project-slide snap-start shrink-0 w-[88vw] sm:w-[86vw] max-w-[1080px] bg-white rounded-3xl border border-[#dcd6c8] shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col group opacity-100 scale-100">
+            <!-- Banner Superior Panorâmico & Elegante com Gradiente Pinho / Verde Floresta -->
+            <div
+              class="w-full h-[480px] sm:h-[520px] bg-gradient-to-tr from-[#0f1d17] via-[#1a2e26] to-[#2e5a44] p-8 sm:p-12 text-[#fbf9f4] relative overflow-hidden flex flex-col justify-between">
+              <div class="flex items-center justify-between text-xs sm:text-sm font-mono z-20">
+                <span
+                  class="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#e8eee9] font-bold shadow-sm">
+                  01 // DISTRIBUTED SYSTEMS
+                </span>
+                <span
+                  class="px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white font-medium">
+                  Rust • Low Latency • High-Throughput
+                </span>
+              </div>
+              <!-- Gráficos decorativos arquiteturais abstratos -->
+              <div
+                class="absolute -right-12 -bottom-16 w-80 h-80 rounded-full border border-white/10 pointer-events-none">
+              </div>
+              <div class="absolute right-12 bottom-6 w-56 h-56 rounded-full border border-white/10 pointer-events-none">
+              </div>
+              <!-- Textura técnica de matriz de pontos sutis (dot matrix) -->
+              <div class="absolute inset-0 pointer-events-none opacity-25"
+                style="background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px); background-size: 20px 20px;">
+              </div>
+              <!-- Fade gradual preto para nitidez cirúrgica do título e tipografia -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none z-10">
+              </div>
+              <div class="z-20 max-w-2xl relative">
+                <span
+                  class="text-xs sm:text-sm font-mono tracking-widest text-[#cbd8cf] uppercase block mb-2 font-bold">Mecanismo
+                  In-Memory &amp; Cluster</span>
+                <h3
+                  class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-bold tracking-tight drop-shadow-md">
+                  HyperScale DB
+                </h3>
+              </div>
+            </div>
+            <!-- Corpo do Card com Tipografia Ampla e Ações Claras -->
+            <div class="p-8 sm:p-12 flex-1 flex flex-col justify-between gap-8 bg-white">
+              <div class="space-y-4">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span
+                    class="px-3 py-1 rounded-md bg-[#e8eee9] text-[#1a2e26] font-mono text-xs font-bold uppercase border border-[#cbd8cf]">Armazenamento
+                    Zero-Copy</span>
+                  <span class="text-xs font-mono text-[#515e57]">Snapshotting distribuído Raft</span>
+                </div>
+                <h4 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#12201b] font-bold">
+                  Mecanismo concorrente de cache distribuído com latência sub-milissegundo
+                </h4>
+                <p class="text-base sm:text-lg text-[#515e57] leading-relaxed max-w-4xl font-normal">
+                  Desenvolvido integralmente em Rust para eliminar gargalos de Garbage Collection. O HyperScale utiliza
+                  I/O assíncrono com ring buffers, replicação tolerante a partições de rede e serialização binária
+                  compacta, sustentando picos de mais de 850.000 ops/seg em nós bare-metal.
+                </p>
+              </div>
+              <!-- Rodapé do Card: Tags e Botão Principal -->
+              <div
+                class="pt-6 border-t border-[#dcd6c8]/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div class="flex flex-wrap gap-2.5 font-mono text-xs sm:text-sm text-[#16201c] font-semibold">
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Rust</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">gRPC</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">TypeScript</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Raft Consensus</span>
+                </div>
+                <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm font-semibold hover:bg-[#243e34] transition-all shadow-sm group-hover:scale-102"
+                  href="#">
+                  <span class="">Explorar Estudo de Caso</span>
+                  <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- PROJETO 02: Novacore Cloud (Azul Ardósia Refinado & Pinho) -->
+          <article
+            class="project-slide snap-start shrink-0 w-[88vw] sm:w-[86vw] max-w-[1080px] bg-white rounded-3xl border border-[#dcd6c8] shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col group opacity-35 scale-[0.98]">
+            <div
+              class="w-full h-[480px] sm:h-[520px] bg-gradient-to-tr from-[#0f172a] via-[#1e293b] to-[#2c3e50] p-8 sm:p-12 text-[#fbf9f4] relative overflow-hidden flex flex-col justify-between">
+              <div class="flex items-center justify-between text-xs sm:text-sm font-mono z-20">
+                <span
+                  class="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#e2e8f0] font-bold shadow-sm">
+                  02 // CLOUD &amp; ORCHESTRATION
+                </span>
+                <span
+                  class="px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white font-medium">
+                  Go • Kubernetes • eBPF
+                </span>
+              </div>
+              <div
+                class="absolute right-10 bottom-10 w-72 h-72 bg-[#334155]/40 rounded-full blur-2xl pointer-events-none">
+              </div>
+              <div class="absolute -left-12 -top-12 w-64 h-64 border border-white/10 rounded-full pointer-events-none">
+              </div>
+              <!-- Textura sutil em dot matrix -->
+              <div class="absolute inset-0 pointer-events-none opacity-25"
+                style="background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px); background-size: 20px 20px;">
+              </div>
+              <!-- Camada de sobreposição escura com fade gradual -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none z-10">
+              </div>
+              <div class="z-20 max-w-2xl relative">
+                <span
+                  class="text-xs sm:text-sm font-mono tracking-widest text-[#cbd5e1] uppercase block mb-2 font-bold">Roteamento
+                  Dinâmico &amp; Resiliência</span>
+                <h3
+                  class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-bold tracking-tight drop-shadow-md">
+                  Novacore Cloud
+                </h3>
+              </div>
+            </div>
+            <div class="p-8 sm:p-12 flex-1 flex flex-col justify-between gap-8 bg-white">
+              <div class="space-y-4">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span
+                    class="px-3 py-1 rounded-md bg-[#e2e8f0] text-[#1e293b] font-mono text-xs font-bold uppercase border border-[#cbd5e1]">Zero-Downtime
+                    Deploys</span>
+                  <span class="text-xs font-mono text-[#515e57]">Canary automatizado e observabilidade viva</span>
+                </div>
+                <h4 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#12201b] font-bold">
+                  Plataforma de orquestração autônoma e mesh de microsserviços
+                </h4>
+                <p class="text-base sm:text-lg text-[#515e57] leading-relaxed max-w-4xl font-normal">
+                  Controlador Kubernetes personalizado que monitora latência de requisições e taxas de erro em tempo
+                  real via eBPF. Aplica rollbacks instantâneos com desvio gracioso de conexões HTTP/gRPC sem interrupção
+                  de sessões de usuários ativos.
+                </p>
+              </div>
+              <div
+                class="pt-6 border-t border-[#dcd6c8]/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div class="flex flex-wrap gap-2.5 font-mono text-xs sm:text-sm text-[#16201c] font-semibold">
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Go</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Next.js</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Kubernetes</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Prometheus</span>
+                </div>
+                <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm font-semibold hover:bg-[#243e34] transition-all shadow-sm group-hover:scale-102"
+                  href="#">
+                  <span class="">Explorar Estudo de Caso</span>
+                  <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- PROJETO 03: Aether Pay (Pinho Profundo com Toque Esmeralda Noturno) -->
+          <article
+            class="project-slide snap-start shrink-0 w-[88vw] sm:w-[86vw] max-w-[1080px] bg-white rounded-3xl border border-[#dcd6c8] shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col group opacity-35 scale-[0.98]">
+            <div
+              class="w-full h-[480px] sm:h-[520px] bg-gradient-to-tr from-[#14231e] via-[#213a30] to-[#3a5849] p-8 sm:p-12 text-[#fbf9f4] relative overflow-hidden flex flex-col justify-between">
+              <div class="flex items-center justify-between text-xs sm:text-sm font-mono z-20">
+                <span
+                  class="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#e8eee9] font-bold shadow-sm">
+                  03 // FINTECH ENGINE
+                </span>
+                <span
+                  class="px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white font-medium">
+                  Double-Entry • Kafka • PostgreSQL
+                </span>
+              </div>
+              <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-white/10 blur-xl pointer-events-none">
+              </div>
+              <!-- Textura sutil em dot matrix -->
+              <div class="absolute inset-0 pointer-events-none opacity-25"
+                style="background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px); background-size: 20px 20px;">
+              </div>
+              <!-- Camada de sobreposição com fade gradual -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none z-10">
+              </div>
+              <div class="z-20 max-w-2xl relative">
+                <span
+                  class="text-xs sm:text-sm font-mono tracking-widest text-[#d5e0d8] uppercase block mb-2 font-bold">Contabilidade
+                  &amp; Conciliação Imutável</span>
+                <h3
+                  class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-bold tracking-tight drop-shadow-md">
+                  Aether Pay
+                </h3>
+              </div>
+            </div>
+            <div class="p-8 sm:p-12 flex-1 flex flex-col justify-between gap-8 bg-white">
+              <div class="space-y-4">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span
+                    class="px-3 py-1 rounded-md bg-[#e8eee9] text-[#1a2e26] font-mono text-xs font-bold uppercase border border-[#cbd8cf]">Idempotência
+                    Estrita</span>
+                  <span class="text-xs font-mono text-[#515e57]">Trilha auditável multi-moeda</span>
+                </div>
+                <h4 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#12201b] font-bold">
+                  Motor financeiro de liquidação e reconciliação contínua
+                </h4>
+                <p class="text-base sm:text-lg text-[#515e57] leading-relaxed max-w-4xl font-normal">
+                  Arquitetura orientada a eventos para processamento financeiro sem discrepâncias. Implementação de
+                  livro-razão imutável de partidas dobradas com bloqueios otimistas e barramento Kafka para orquestração
+                  de liquidações instantâneas.
+                </p>
+              </div>
+              <div
+                class="pt-6 border-t border-[#dcd6c8]/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div class="flex flex-wrap gap-2.5 font-mono text-xs sm:text-sm text-[#16201c] font-semibold">
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Node.js</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">PostgreSQL</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Kafka</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Redis Locks</span>
+                </div>
+                <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm font-semibold hover:bg-[#243e34] transition-all shadow-sm group-hover:scale-102"
+                  href="#">
+                  <span class="">Explorar Estudo de Caso</span>
+                  <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- PROJETO 04: Synthetix Studio (Ardósia Profundo com Grafite & Pinho) -->
+          <article
+            class="project-slide snap-start shrink-0 w-[88vw] sm:w-[86vw] max-w-[1080px] bg-white rounded-3xl border border-[#dcd6c8] shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col group opacity-35 scale-[0.98]">
+            <div
+              class="w-full h-[480px] sm:h-[520px] bg-gradient-to-tr from-[#111e25] via-[#1e343b] to-[#2e4c52] p-8 sm:p-12 text-[#fbf9f4] relative overflow-hidden flex flex-col justify-between">
+              <div class="flex items-center justify-between text-xs sm:text-sm font-mono z-20">
+                <span
+                  class="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#e0e9ec] font-bold shadow-sm">
+                  04 // WEBGPU &amp; GRAPHICS
+                </span>
+                <span
+                  class="px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white font-medium">
+                  WebGPU • React • WGSL
+                </span>
+              </div>
+              <div
+                class="absolute -left-10 -bottom-10 w-72 h-72 border border-white/15 rounded-full pointer-events-none">
+              </div>
+              <!-- Textura sutil em dot matrix -->
+              <div class="absolute inset-0 pointer-events-none opacity-25"
+                style="background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px); background-size: 20px 20px;">
+              </div>
+              <!-- Camada de sobreposição escura com fade gradual -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none z-10">
+              </div>
+              <div class="z-20 max-w-2xl relative">
+                <span
+                  class="text-xs sm:text-sm font-mono tracking-widest text-[#cde0e4] uppercase block mb-2 font-bold">Editor
+                  de Shaders Baseado em Nós</span>
+                <h3
+                  class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-bold tracking-tight drop-shadow-md">
+                  Synthetix Studio
+                </h3>
+              </div>
+            </div>
+            <div class="p-8 sm:p-12 flex-1 flex flex-col justify-between gap-8 bg-white">
+              <div class="space-y-4">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span
+                    class="px-3 py-1 rounded-md bg-[#e4eef0] text-[#1e343b] font-mono text-xs font-bold uppercase border border-[#c6dadc]">Renderização
+                    em 120 FPS</span>
+                  <span class="text-xs font-mono text-[#515e57]">Compilação JIT de grafos para shaders nativos</span>
+                </div>
+                <h4 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#12201b] font-bold">
+                  Ambiente interativo de síntese visual e shaders procedurais
+                </h4>
+                <p class="text-base sm:text-lg text-[#515e57] leading-relaxed max-w-4xl font-normal">
+                  Interface de nós reativa para artistas técnicos e programadores gráficos. Converte estruturas
+                  complexas de nós diretamente em pipelines otimizados de WGSL/GLSL com renderização por aceleração de
+                  hardware direto no navegador.
+                </p>
+              </div>
+              <div
+                class="pt-6 border-t border-[#dcd6c8]/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div class="flex flex-wrap gap-2.5 font-mono text-xs sm:text-sm text-[#16201c] font-semibold">
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">React</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Three.js</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">WGSL</span>
+                  <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">WebAssembly</span>
+                </div>
+                <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm font-semibold hover:bg-[#243e34] transition-all shadow-sm group-hover:scale-102"
+                  href="#">
+                  <span class="">Explorar Estudo de Caso</span>
+                  <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Indicador de Navegação Inferior Acolhedor -->
+      <div class="mt-8 flex items-center justify-between text-sm text-[#515e57] font-mono px-2">
+        <div class="flex items-center gap-2" id="carousel-dots">
+          <button aria-label="Ir para projeto 1" class="h-2 w-8 rounded-full bg-[#2e5a44] transition-all"></button>
+          <button aria-label="Ir para projeto 2"
+            class="h-2 w-2.5 rounded-full bg-[#dcd6c8] hover:bg-[#2e5a44]/60 transition-all"></button>
+          <button aria-label="Ir para projeto 3"
+            class="h-2 w-2.5 rounded-full bg-[#dcd6c8] hover:bg-[#2e5a44]/60 transition-all"></button>
+          <button aria-label="Ir para projeto 4"
+            class="h-2 w-2.5 rounded-full bg-[#dcd6c8] hover:bg-[#2e5a44]/60 transition-all"></button>
+        </div>
+        <div class="flex items-center gap-2 text-xs font-mono text-[#515e57]">
+          <span class="material-symbols-outlined text-sm text-[#2e5a44]">swipe</span>
+          <span class="">Deslize ou use as setas para navegar</span>
+        </div>
+      </div>
+    </section>
+    <!-- Seção: Competências & Stack Tecnológica (Ampliadas e Equilibradas) -->
+    <section class="py-16 border-t border-[#dcd6c8]/80" id="sobre">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Coluna de Abordagem com Tipografia Refinada -->
+        <div class="space-y-4">
+          <div class="text-xs font-mono uppercase tracking-widest text-[#2e5a44] font-bold">Abordagem &amp; Foco</div>
+          <h2 class="font-serif text-3xl sm:text-4xl text-[#12201b] leading-snug font-bold">
+            Sistemas resilientes, código sustentável.
+          </h2>
+          <p class="text-base text-[#515e57] leading-relaxed font-normal">
+            Prefiro arquiteturas simples, escaláveis e de fácil manutenção a complexidades acidentais. Minha abordagem
+            une a solidez e rigor de engenharia de backend com a sensibilidade e acabamento de um design sofisticado.
+          </p>
+        </div>
+        <!-- Coluna Backend & Dados -->
+        <div
+          class="bg-white p-8 rounded-3xl border border-[#dcd6c8] space-y-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 text-lg font-bold text-[#12201b]">
+            <div class="w-10 h-10 rounded-xl bg-[#e8eee9] text-[#1a2e26] flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">dns</span>
+            </div>
+            <span class="">Backend &amp; Dados</span>
+          </div>
+          <p class="text-sm sm:text-base text-[#515e57] leading-relaxed font-normal">
+            Microsserviços de alto rendimento, barramentos de eventos assíncronos, caching de baixa latência e modelagem
+            estrita em bancos relacionais e não-relacionais.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs text-[#16201c] font-semibold">
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Node.js / Bun</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Go</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Rust</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">PostgreSQL</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Redis</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Kafka</span>
+          </div>
+        </div>
+        <!-- Coluna Frontend & Nuvem -->
+        <div
+          class="bg-white p-8 rounded-3xl border border-[#dcd6c8] space-y-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 text-lg font-bold text-[#12201b]">
+            <div class="w-10 h-10 rounded-xl bg-[#e2e8f0] text-[#1e293b] flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">layers</span>
+            </div>
+            <span class="">Frontend &amp; Nuvem</span>
+          </div>
+          <p class="text-sm sm:text-base text-[#515e57] leading-relaxed font-normal">
+            Interfaces web fluidas com renderização moderna, acessibilidade nativa, tipografia calculada,
+            conteinerização e pipelines de entrega contínua.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs text-[#16201c] font-semibold">
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">React / Next.js</span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">TypeScript</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Tailwind CSS</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Docker</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Kubernetes</span>
+            <span class="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">AWS Cloud</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Seção de Contato Direto & Convidativo (Escala Confortável e Acolhedora com Pinho e Linho) -->
+    <section
+      class="mt-10 py-12 px-8 sm:px-12 rounded-3xl bg-gradient-to-br from-[#ede9e0] via-[#f5f2eb] to-[#e8eee9] border border-[#dcd6c8] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 shadow-sm">
+      <div class="space-y-3 max-w-xl">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#2e5a44] font-bold">Vamos conversar</span>
+        <h3 class="font-serif text-3xl sm:text-4xl text-[#12201b] font-bold">
+          Tem um novo desafio ou projeto em mente?
+        </h3>
+        <p class="text-base text-[#515e57] leading-relaxed font-normal">
+          Estou disponível para novas oportunidades estratégicas, arquitetura de software sob demanda e consultorias
+          técnicas.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full lg:w-auto">
+        <!-- Botão Copiar Email com feedback interativo -->
+        <button
+          class="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-white border border-[#dcd6c8] text-[#16201c] text-sm sm:text-base font-semibold hover:bg-[#fbf9f4] transition-colors shadow-xs group"
+          id="copy-email-btn">
+          <span class="material-symbols-outlined text-lg text-[#2e5a44]">content_copy</span>
+          <span class="" id="email-text-label">gabriel.dev@domain.com</span>
+        </button>
+        <a class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm sm:text-base font-semibold hover:bg-[#243e34] transition-all shadow-sm hover:shadow-md"
+          href="mailto:gabriel.dev@domain.com">
+          <span class="">Enviar Mensagem</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <!-- Rodapé Minimalista -->
+  <footer class="w-full border-t border-[#dcd6c8]/80 bg-[#fbf9f4] py-10">
+    <div
+      class="max-w-6xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs sm:text-sm font-mono text-[#515e57]">
+      <div class="flex items-center gap-2.5">
+        <span class="font-bold text-[#12201b]">© 2025 Gabriel</span>
+        <span class="">•</span>
+        <span class="">São Paulo / Remoto</span>
+      </div>
+      <div class="flex items-center gap-8 font-medium">
+        <a class="hover:text-[#2e5a44] transition-colors" href="https://github.com" rel="noopener noreferrer"
+          target="_blank">GitHub</a>
+        <a class="hover:text-[#2e5a44] transition-colors" href="https://linkedin.com" rel="noopener noreferrer"
+          target="_blank">LinkedIn</a>
+        <a class="hover:text-[#2e5a44] transition-colors" href="mailto:gabriel.dev@domain.com">Email</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Script Interativo do Carrossel Monumental (1 por vez com peek sutil de continuidade) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.getElementById('projects-carousel');
+      const prevBtn = document.getElementById('slider-prev');
+      const nextBtn = document.getElementById('slider-next');
+      const slides = Array.from(document.querySelectorAll('.project-slide'));
+      const dotsContainer = document.getElementById('carousel-dots');
+      const currentIndexLabel = document.getElementById('carousel-current-index');
+      const totalCountLabel = document.getElementById('carousel-total-count');
+
+      if (!carousel || slides.length === 0) return;
+
+      totalCountLabel.textContent = String(slides.length).padStart(2, '0');
+
+      // Retorna a largura do slide + gap de deslocamento
+      const getScrollStep = () => {
+        const slide = slides[0];
+        const style = window.getComputedStyle(carousel);
+        const gap = parseFloat(style.columnGap || style.gap || 32);
+        return slide.getBoundingClientRect().width + gap;
+      };
+
+      // Navegação via botões
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+      });
+
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+      });
+
+      // Navegação direta pelos dots
+      if (dotsContainer) {
+        const dots = Array.from(dotsContainer.querySelectorAll('button'));
+        dots.forEach((dot, idx) => {
+          dot.addEventListener('click', () => {
+            slides[idx].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+          });
+        });
+      }
+
+      // Atualização de opacidade, escala e indicador numérico do projeto ativo
+      const updateActiveSlide = () => {
+        const carouselRect = carousel.getBoundingClientRect();
+        let bestIndex = 0;
+        let minDistance = Infinity;
+
+        slides.forEach((slide, idx) => {
+          const slideRect = slide.getBoundingClientRect();
+          // Distância da borda esquerda do slide até a borda esquerda do carrossel
+          const dist = Math.abs(slideRect.left - carouselRect.left);
+
+          if (dist < minDistance) {
+            minDistance = dist;
+            bestIndex = idx;
+          }
+        });
+
+        // Aplica destaque ao slide ativo e efeito sutil de 'peek' nos outros
+        slides.forEach((slide, idx) => {
+          if (idx === bestIndex) {
+            slide.classList.remove('opacity-35', 'scale-[0.98]');
+            slide.classList.add('opacity-100', 'scale-100');
+          } else {
+            slide.classList.remove('opacity-100', 'scale-100');
+            slide.classList.add('opacity-35', 'scale-[0.98]');
+          }
+        });
+
+        // Atualiza o contador de tela (ex: 01, 02...)
+        if (currentIndexLabel) {
+          currentIndexLabel.textContent = String(bestIndex + 1).padStart(2, '0');
+        }
+
+        // Atualiza o estado dos dots
+        if (dotsContainer) {
+          const dots = dotsContainer.querySelectorAll('button');
+          dots.forEach((dot, idx) => {
+            if (idx === bestIndex) {
+              dot.className = "h-2 w-8 rounded-full bg-[#2e5a44] transition-all";
+            } else {
+              dot.className = "h-2 w-2.5 rounded-full bg-[#dcd6c8] hover:bg-[#2e5a44]/60 transition-all";
+            }
+          });
+        }
+      };
+
+      let scrollTimeout;
+      carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveSlide, 30);
+      }, { passive: true });
+
+      window.addEventListener('resize', updateActiveSlide);
+      updateActiveSlide();
+
+      // Feedback de Cópia do E-mail
+      const copyBtn = document.getElementById('copy-email-btn');
+      const label = document.getElementById('email-text-label');
+      const emailVal = "gabriel.dev@domain.com";
+
+      if (copyBtn && label) {
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(emailVal).then(() => {
+            const original = label.innerText;
+            label.innerText = "E-mail copiado!";
+            copyBtn.classList.add('border-[#2e5a44]', 'text-[#2e5a44]');
+            setTimeout(() => {
+              label.innerText = original;
+              copyBtn.classList.remove('border-[#2e5a44]', 'text-[#2e5a44]');
+            }, 2000);
+          }).catch(() => {
+            window.location.href = `mailto:${emailVal}`;
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

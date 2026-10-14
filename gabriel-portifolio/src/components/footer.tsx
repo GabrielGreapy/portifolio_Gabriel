@@ -4,7 +4,7 @@ export default function Footer(){
             <div
             className="max-w-6xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs sm:text-sm font-mono text-[#515e57]">
             <div className="flex items-center gap-2.5">
-                <span className="font-bold text-[#12201b]">© 2025 Gabriel</span>
+                <span className="font-bold text-[#12201b]">© 2026 Gabriel Martins</span>
                 <span className="">•</span>
                 <span className="">Remoto</span>
             </div>

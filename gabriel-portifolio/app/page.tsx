@@ -3,6 +3,7 @@ import Header from "@/src/components/header";
 import Footer from "@/src/components/footer";
 import Hero from "@/src/components/hero";
 import Projects from "@/src/components/projects";
+import Competences from "@/src/components/competences";
 export default function Home() {
   return (
     <div>
@@ -10,6 +11,7 @@ export default function Home() {
       <main className="w-full flex-1 max-w-6xl mx-auto px-6 lg:px-10 pt-12 pb-24">
         <Hero />
         <Projects />
+        <Competences />
       </main>
       <Footer />
     </div>
