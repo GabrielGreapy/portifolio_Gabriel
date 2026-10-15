@@ -1,5 +1,5 @@
 'use client'
-
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 export default function Header(){
     return(
         <header className="sticky top-0 z-50 backdrop-blur-md bg-[#fbf9f4]/90 border-b border-[#dcd6c8]/80 transition-all">
@@ -31,7 +31,8 @@ export default function Header(){
         <a className="px-5 py-2.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-xs tracking-wider uppercase font-semibold hover:bg-[#243e34] transition-all shadow-sm flex items-center gap-2"
           href="mailto:gabriel.dev@domain.com">
           <span className="">Contato</span>
-          <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+          <ArrowOutwardIcon />
+          
         </a>
       </nav>
     </div>

@@ -1,3 +1,6 @@
+import DnsIcon from '@mui/icons-material/Dns';
+import LayersIcon from '@mui/icons-material/Layers';
+
 export default function Competences(){
     return(
         <section className="py-16 border-t border-[#dcd6c8]/80" id="sobre">
@@ -18,7 +21,7 @@ export default function Competences(){
           className="bg-white p-8 rounded-3xl border border-[#dcd6c8] space-y-6 shadow-sm hover:shadow-md transition-shadow">
           <div className="flex items-center gap-3 text-lg font-bold text-[#12201b]">
             <div className="w-10 h-10 rounded-xl bg-[#e8eee9] text-[#1a2e26] flex items-center justify-center">
-              <span className="material-symbols-outlined text-xl">dns</span>
+              <DnsIcon/>
             </div>
             <span className="">Backend &amp; Dados</span>
           </div>
@@ -40,7 +43,7 @@ export default function Competences(){
           className="bg-white p-8 rounded-3xl border border-[#dcd6c8] space-y-6 shadow-sm hover:shadow-md transition-shadow">
           <div className="flex items-center gap-3 text-lg font-bold text-[#12201b]">
             <div className="w-10 h-10 rounded-xl bg-[#e2e8f0] text-[#1e293b] flex items-center justify-center">
-              <span className="material-symbols-outlined text-xl">layers</span>
+              <LayersIcon />
             </div>
             <span className="">Frontend &amp; Nuvem</span>
           </div>

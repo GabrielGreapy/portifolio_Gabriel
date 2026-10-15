@@ -1,3 +1,6 @@
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 export default function Footer(){
     return(
         <footer className="w-full border-t border-[#dcd6c8]/80 bg-[#fbf9f4] py-10">
@@ -10,10 +13,10 @@ export default function Footer(){
             </div>
             <div className="flex items-center gap-8 font-medium">
                 <a className="hover:text-[#2e5a44] transition-colors" href="https://github.com/GabrielGreapy" rel="noopener noreferrer"
-                target="_blank">GitHub</a>
+                target="_blank"> <GitHubIcon/>GitHub</a>
                 <a className="hover:text-[#2e5a44] transition-colors" href="www.linkedin.com/in/gabriel-martins-878529365" rel="noopener noreferrer"
-                target="_blank">LinkedIn</a>
-                <a className="hover:text-[#2e5a44] transition-colors" href="mailto:gabrielmartinswebdev@gmail.com">Email</a>
+                target="_blank"> <LinkedInIcon/>LinkedIn</a>
+                <a className="hover:text-[#2e5a44] transition-colors" href="mailto:gabrielmartinswebdev@gmail.com"><EmailIcon/>Email</a>
             </div>
             </div>
         </footer>

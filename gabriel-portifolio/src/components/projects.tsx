@@ -1,5 +1,7 @@
 'use client'
-
+import WestIcon from '@mui/icons-material/West';
+import EastIcon from '@mui/icons-material/East';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 export default function Projects(){
     return(
         <section className="pt-16 pb-20 overflow-hidden" id="projetos">
@@ -27,12 +29,12 @@ export default function Projects(){
                     <button aria-label="Projeto anterior"
                     className="w-12 h-12 rounded-full border border-[#dcd6c8] bg-[#f5f2eb] hover:bg-[#dcd6c8] hover:text-[#243e34] text-[#16201c] flex items-center justify-center transition-all shadow-xs active:scale-95"
                     id="slider-prev">
-                    <span className="material-symbols-outlined text-2xl">west</span>
+                    <WestIcon/>
                     </button>
                     <button aria-label="Próximo projeto"
                     className="w-12 h-12 rounded-full border border-[#dcd6c8] bg-[#f5f2eb] hover:bg-[#dcd6c8] hover:text-[#243e34] text-[#16201c] flex items-center justify-center transition-all shadow-xs active:scale-95"
                     id="slider-next">
-                    <span className="material-symbols-outlined text-2xl">east</span>
+                    <EastIcon />
                     </button>
                 </div>
                 </div>
@@ -111,7 +113,7 @@ export default function Projects(){
                         <a className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm font-semibold hover:bg-[#243e34] transition-all shadow-sm group-hover:scale-102"
                         href="#">
                         <span className="">Explorar Estudo de Caso</span>
-                        <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                        <ArrowForwardIosIcon />
                         </a>
                     </div>
                     </div>

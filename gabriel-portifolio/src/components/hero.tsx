@@ -1,3 +1,6 @@
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import CodeIcon from '@mui/icons-material/Code';
+import eu from '@/public/imgs/eu.jpg';
 export default function Hero(){
     return(
         <section className="py-12 md:py-20 border-b border-[#dcd6c8]/80">
@@ -21,12 +24,12 @@ export default function Hero(){
             <a className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm sm:text-base font-semibold hover:bg-[#243e34] transition-all shadow-sm hover:shadow-md"
               href="#projetos">
               <span className="">Explorar Projetos</span>
-              <span className="material-symbols-outlined text-lg">arrow_downward</span>
+              <ArrowDownwardIcon />
             </a>
             <a className="inline-flex items-center gap-2.5 px-5 py-3.5 rounded-full bg-[#ede9e0] border border-[#dcd6c8] text-[#16201c] text-sm sm:text-base font-semibold hover:bg-[#e4dfd4] transition-colors"
               href="https://github.com" rel="noopener noreferrer" target="_blank">
-              <span className="material-symbols-outlined text-lg">code</span>
-              <span className="font-mono text-xs sm:text-sm">github.com/gabriel</span>
+              <CodeIcon />
+              <span className="font-mono text-xs sm:text-sm">github.com/GabrielGreapy</span>
             </a>
           </div>
         </div>
@@ -36,9 +39,9 @@ export default function Hero(){
             className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-3xl p-3 bg-gradient-to-b from-[#e8e4da] to-[#dcd6c8] shadow-lg border border-[#dcd6c8]">
             <div
               className="w-full h-full rounded-2xl overflow-hidden bg-[#f5f2eb] relative flex items-center justify-center border border-[#dcd6c8]">
-              <img alt="Foto de Gabriel"
+              <img src={eu.src}
                 className="w-full h-full object-cover grayscale-[15%] contrast-[102%] hover:scale-105 transition-transform duration-700 ease-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKGUatxuNzLo4CWwKP67Ptssfj2HqZxJo6U9qe3Rs8VpSikcgba-5TnqC8ftYxvjWbh8sGD80DCwHjAv62vbfTby5OKU__NBdEgOMvrBV22RLvZ0xk2TH9gY4LREzdrEeDoUdAhif9sR9C9bC4LFXDzmuDZD0KZaQaIfbBQ7XY2QJpwHBm95Ol7mWkh4ZRbJPV2crAfwti4okRG3wRy4JT-dgLSkfdwXTOcsGic1lLXrzWrBUPC6iG9g" />
+                 alt='eu'></img>
               <div
                 className="absolute inset-0 bg-gradient-to-t from-[#12201b]/35 via-transparent to-transparent pointer-events-none">
               </div>
