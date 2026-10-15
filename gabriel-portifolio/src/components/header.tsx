@@ -1,5 +1,6 @@
 'use client'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import Logo from './logo';
 export default function Header(){
     return(
         <header className="sticky top-0 z-50 backdrop-blur-md bg-[#fbf9f4]/90 border-b border-[#dcd6c8]/80 transition-all">
@@ -7,7 +8,7 @@ export default function Header(){
       <a className="group flex items-center gap-3.5" href="#">
         <div
           className="w-10 h-10 rounded-full bg-[#1a2e26] text-[#fbf9f4] flex items-center justify-center font-serif italic text-lg font-bold group-hover:bg-[#2e5a44] transition-colors shadow-sm">
-          G
+          <Logo  />
         </div>
         <div className="flex flex-col">
           <span className="text-base font-bold tracking-tight text-[#16201c]">Gabriel Martins</span>

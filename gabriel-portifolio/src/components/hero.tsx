@@ -11,7 +11,7 @@ export default function Hero(){
             className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#e8eee9] text-[#243e34] border border-[#cbd8cf] text-xs font-mono uppercase tracking-wider font-bold">
             <span className="">PORTFOLIO SELECIONADO</span>
             <span className="text-[#2e5a44]/40">•</span>
-            <span className="">2025</span>
+            <span className="">2026</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#12201b] leading-[1.1] tracking-tight font-bold">
             Engenharia web refinada, arquitetura limpa e interfaces acolhedoras.
@@ -27,7 +27,7 @@ export default function Hero(){
               <ArrowDownwardIcon />
             </a>
             <a className="inline-flex items-center gap-2.5 px-5 py-3.5 rounded-full bg-[#ede9e0] border border-[#dcd6c8] text-[#16201c] text-sm sm:text-base font-semibold hover:bg-[#e4dfd4] transition-colors"
-              href="https://github.com" rel="noopener noreferrer" target="_blank">
+              href="https://github.com/GabrielGreapy" rel="noopener noreferrer" target="_blank">
               <CodeIcon />
               <span className="font-mono text-xs sm:text-sm">github.com/GabrielGreapy</span>
             </a>
