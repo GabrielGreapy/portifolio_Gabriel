@@ -15,8 +15,11 @@ export default function Projects(){
             descriptionTitle : "Plataforma de monitoramento de turismo local com arquitetura leve e escalável",
             description : "Sistema para organização de conteúdo visual local, com busca, armazenamento e proxy de dados para melhorar desempenho e experiência do usuário.",
             toolsUsed : ["Next.js", "TypeScript", "GoogleMaps", "APIfy", "Places Google-Api"], 
-            img : "@/public/imgs/thermoTurismo.png",
-
+            img : "/imgs/thermoTurismo.png",
+            logoImg :  "/imgs/thermoTurismoLogo.png",
+            backgroundColor : "lab(86.42 6.13 78.4 / 1)",
+            bestAt : ["APIs", "Storage",  "DataBase"]
+            
         },
         {
             upperText : "projeto2",
@@ -25,7 +28,10 @@ export default function Projects(){
             descriptionTitle : "desc",
             description : "descrição longa",
             toolsUsed : ["fer", "ra", "men", "tas"], 
-            img : "@/public/imgs/eu.jpg",
+            img : "/imgs/eu.jpg",
+            logoImg :  "/imgs/thermoTurismoLogo.png",
+            backgroundColor : "lab(86.4156% 6.13147 78.3961)",
+            bestAt : ["APIs", "Storage",  "DataBase"]
         }
     ]
 
@@ -74,6 +80,7 @@ export default function Projects(){
                 id="projects-carousel">
                 { projects.map((project, index) => (
                     <article
+                        key={project.title}
                         className="project-slide snap-start shrink-0 w-[88vw] sm:w-[86vw] max-w-[1080px] bg-white rounded-3xl border border-[#dcd6c8] shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col group opacity-100 scale-100">
                         
                         <div
@@ -81,12 +88,17 @@ export default function Projects(){
                         <div className="flex items-center justify-between text-xs sm:text-sm font-mono z-20">
                             <span
                             className="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#e8eee9] font-bold shadow-sm">
-                            { 1}
+                            { index + 1}
                             </span>
-                            <span
-                            className="px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white font-medium">
-                            Rust • Low Latency • High-Throughput
-                            </span>
+                            <div className="flex flex-wrap justify-end gap-2">
+                            {project.bestAt.map((best, bestIndex) => (
+                                    <p key={`${best}-${bestIndex}`}
+                                    className="px-1.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/10 text-white font-medium">
+                                        {best}
+                                    </p>
+                                ))}
+                            </div>
+                            
                         </div>
                         
                         <div
@@ -95,22 +107,38 @@ export default function Projects(){
                         <div className="absolute right-12 bottom-6 w-56 h-56 rounded-full border border-white/10 pointer-events-none">
                         </div>
                         
+                        <div className="absolute inset-0 pointer-events-none"
+                            style={{
+                                backgroundImage: `url("${project.img}")`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                            }}>
+                        </div>
                         <div className="absolute inset-0 pointer-events-none opacity-25"
-                            style={{ backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px)", backgroundSize: "20px 20px" }}>
+                            style={{ background: project.backgroundColor }}>
                         </div>
                         
                         <div
                             className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none z-10">
                         </div>
-                        <div className="z-20 max-w-2xl relative">
-                            <span
-                            className="text-xs sm:text-sm font-mono tracking-widest text-[#cbd8cf] uppercase block mb-2 font-bold">
-                                { project.upperText}
-                            </span>
-                            <h3
-                            className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-bold tracking-tight drop-shadow-md">
-                            { project.title }
-                            </h3>
+                        <div className="z-20 flex items-center gap-4 relative">
+                            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md p-2 shadow-lg shrink-0">
+                                <img
+                                    src={project.logoImg ?? undefined}
+                                    alt={`${project.title} logo`}
+                                    className="h-full w-full object-contain"
+                                />
+                            </div>
+                            <div className="max-w-2xl relative">
+                                <span
+                                className="text-xs sm:text-sm font-mono tracking-widest text-[#cbd8cf] uppercase block mb-2 font-bold">
+                                    { project.upperText}
+                                </span>
+                                <h3
+                                className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-bold tracking-tight drop-shadow-md">
+                                { project.title }
+                                </h3>
+                            </div>
                         </div>
                         </div>
                     
@@ -141,8 +169,9 @@ export default function Projects(){
                             
                             </div>
                             <a className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-sm font-semibold hover:bg-[#243e34] transition-all shadow-sm group-hover:scale-102"
-                            href="#">
-                            <span className="">Explorar Estudo de Caso</span>
+                            href="#"
+                            style={{ background: project.backgroundColor }}>
+                            <span className="">Explore mais</span>
                             <ArrowForwardIosIcon />
                             </a>
                         </div>
@@ -157,13 +186,15 @@ export default function Projects(){
             
             <div className="mt-8 flex items-center justify-between text-sm text-[#515e57] font-mono px-2">
                 <div className="flex items-center gap-2" id="carousel-dots">
-                <button aria-label="Ir para projeto 1" className="h-2 w-8 rounded-full bg-[#2e5a44] transition-all"></button>
-                <button aria-label="Ir para projeto 2"
-                    className="h-2 w-2.5 rounded-full bg-[#dcd6c8] hover:bg-[#2e5a44]/60 transition-all"></button>
-                <button aria-label="Ir para projeto 3"
-                    className="h-2 w-2.5 rounded-full bg-[#dcd6c8] hover:bg-[#2e5a44]/60 transition-all"></button>
-                <button aria-label="Ir para projeto 4"
-                    className="h-2 w-2.5 rounded-full bg-[#dcd6c8] hover:bg-[#2e5a44]/60 transition-all"></button>
+                    {projects.map((_, index) => (
+                        <button
+                            key={index}
+                            type="button"
+                            className="h-2 w-8 rounded-full bg-[#2e5a44] transition-all"
+                        />
+                    ))}
+                
+                
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono text-[#515e57]">
                 <span className="material-symbols-outlined text-sm text-[#2e5a44]">swipe</span>

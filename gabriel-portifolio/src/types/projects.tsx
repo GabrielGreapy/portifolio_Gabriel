@@ -5,5 +5,8 @@ export interface project{
     descriptionTitle : string,
     description : string,
     toolsUsed : string[] | null ,
-    img : string | null
+    img : string | null,
+    logoImg : string | null,
+    backgroundColor : string,
+    bestAt : string[]
 }
