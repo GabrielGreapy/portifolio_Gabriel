@@ -31,11 +31,11 @@ export default function Competences(){
           </p>
           <div className="flex flex-wrap gap-2 pt-2 font-mono text-xs text-[#16201c] font-semibold">
             <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Node.js / Bun</span>
-            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Go</span>
-            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Rust</span>
+            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Django REST</span>
+            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Docker</span>
             <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">PostgreSQL</span>
-            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Redis</span>
-            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Kafka</span>
+            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">FastAPI</span>
+            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Firebase & Supabase</span>
           </div>
         </div>
        
@@ -55,9 +55,9 @@ export default function Competences(){
             <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">React / Next.js</span>
             <span className="px-3.5 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">TypeScript</span>
             <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Tailwind CSS</span>
-            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Docker</span>
-            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Kubernetes</span>
-            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">AWS Cloud</span>
+            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">Material UI</span>
+            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">React Native</span>
+            <span className="px-3 py-1.5 rounded-lg bg-[#ede9e0] border border-[#dcd6c8]/60">AWS</span>
           </div>
         </div>
       </div>
