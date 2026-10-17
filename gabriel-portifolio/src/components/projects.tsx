@@ -3,10 +3,13 @@ import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import type { project } from '../types/projects';
+import { useRef } from 'react';
  
 
 
 export default function Projects(){
+    const carouselRef = useRef<HTMLDivElement>(null);
+
     const projects : project[]= [
         {
             upperText : "Visor de Turismo Local",
@@ -36,6 +39,19 @@ export default function Projects(){
     ]
 
 
+    const handleScrollProjects = ( directions : 'left' |'right') => {
+        if( carouselRef.current){
+            const scrollAmount = directions === 'left' ? -500 : 600;
+
+            carouselRef.current.scrollBy(
+                {
+                    left : scrollAmount,
+                    behavior : 'smooth'
+                }
+            )
+        }
+    }
+
 
 
     return(
@@ -58,17 +74,21 @@ export default function Projects(){
                     className="font-mono text-sm sm:text-base font-semibold text-[#515e57] bg-[#ede9e0] border border-[#dcd6c8] px-4 py-2 rounded-full">
                     <span className="text-[#12201b] font-bold" id="carousel-current-index">01</span>
                     <span className="text-[#515e57]/60"> / </span>
-                    <span className="text-[#515e57]" id="carousel-total-count">04</span>
+                    <span className="text-[#515e57]" id="carousel-total-count">0{ projects.length }</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                     <button aria-label="Projeto anterior"
                     className="w-12 h-12 rounded-full border border-[#dcd6c8] bg-[#f5f2eb] hover:bg-[#dcd6c8] hover:text-[#243e34] text-[#16201c] flex items-center justify-center transition-all shadow-xs active:scale-95"
-                    id="slider-prev">
+                    id="slider-prev"
+                    onClick={() => handleScrollProjects('left')}
+                    >
                     <WestIcon/>
                     </button>
                     <button aria-label="Próximo projeto"
                     className="w-12 h-12 rounded-full border border-[#dcd6c8] bg-[#f5f2eb] hover:bg-[#dcd6c8] hover:text-[#243e34] text-[#16201c] flex items-center justify-center transition-all shadow-xs active:scale-95"
-                    id="slider-next">
+                    id="slider-next"
+                    onClick={() => handleScrollProjects('right')}
+                    >
                     <EastIcon />
                     </button>
                 </div>
@@ -77,6 +97,7 @@ export default function Projects(){
             
             <div className="relative -mx-6 lg:-mx-10 px-6 lg:px-10">
                 <div className="flex gap-8 overflow-x-auto hide-scrollbar scroll-smooth snap-x snap-mandatory py-4"
+                ref={carouselRef}
                 id="projects-carousel">
                 { projects.map((project, index) => (
                     <article
