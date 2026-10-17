@@ -3,13 +3,13 @@ import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import type { project } from '../types/projects';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
  
 
 
 export default function Projects(){
     const carouselRef = useRef<HTMLDivElement>(null);
-
+    const [currentElement, setCurrentElement] = useState(0)
     const projects : project[]= [
         {
             upperText : "Visor de Turismo Local",
@@ -39,18 +39,26 @@ export default function Projects(){
     ]
 
 
-    const handleScrollProjects = ( directions : 'left' |'right') => {
-        if( carouselRef.current){
-            const scrollAmount = directions === 'left' ? -500 : 600;
+    const handleScrollProjects = (direction: 'left' | 'right') => {
+        if (!carouselRef.current) return;
 
-            carouselRef.current.scrollBy(
-                {
-                    left : scrollAmount,
-                    behavior : 'smooth'
-                }
-            )
-        }
-    }
+        const scrollAmount = direction === 'left'
+            ? -carouselRef.current.clientWidth * 0.9
+            : carouselRef.current.clientWidth * 0.9;
+
+        carouselRef.current.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth',
+        });
+
+        setCurrentElement((prev) => {
+            if (direction === 'left') {
+                return Math.max(prev - 1, 0);
+            }
+
+            return Math.min(prev + 1, projects.length - 1);
+        });
+    };
 
 
 
@@ -72,7 +80,7 @@ export default function Projects(){
                 
                 <div
                     className="font-mono text-sm sm:text-base font-semibold text-[#515e57] bg-[#ede9e0] border border-[#dcd6c8] px-4 py-2 rounded-full">
-                    <span className="text-[#12201b] font-bold" id="carousel-current-index">01</span>
+                    <span className="text-[#12201b] font-bold" id="carousel-current-index">0{currentElement + 1}</span>
                     <span className="text-[#515e57]/60"> / </span>
                     <span className="text-[#515e57]" id="carousel-total-count">0{ projects.length }</span>
                 </div>
@@ -80,7 +88,9 @@ export default function Projects(){
                     <button aria-label="Projeto anterior"
                     className="w-12 h-12 rounded-full border border-[#dcd6c8] bg-[#f5f2eb] hover:bg-[#dcd6c8] hover:text-[#243e34] text-[#16201c] flex items-center justify-center transition-all shadow-xs active:scale-95"
                     id="slider-prev"
-                    onClick={() => handleScrollProjects('left')}
+                    onClick={
+                        () => handleScrollProjects('left')                        
+                    }
                     >
                     <WestIcon/>
                     </button>
