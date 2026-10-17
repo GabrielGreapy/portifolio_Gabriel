@@ -30,7 +30,7 @@ export default function Header(){
         <a className="text-[#515e57] hover:text-[#16201c] transition-colors hidden md:block" href="#sobre">Sobre &amp;
           Stack</a>
         <a className="px-5 py-2.5 rounded-full bg-[#1a2e26] text-[#fbf9f4] text-xs tracking-wider uppercase font-semibold hover:bg-[#243e34] transition-all shadow-sm flex items-center gap-2"
-          href="mailto:gabriel.dev@domain.com">
+          href="mailto:gabrielmartinswebdev@gmail.com">
           <span className="">Contato</span>
           <ArrowOutwardIcon />
           
